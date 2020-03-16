@@ -45,18 +45,69 @@ console.log (createStudent ("Renu", "Shinde"));
 let tim = createStudent("Tim", "Garcia");
 let matt = createStudent("Matt", "Lane");
 let elie = createStudent("Elie", "Schoppik");
-let students = [tim, matt,elie];
+let students = [tim, matt, elie];
 console.log(students);
 
 // Write a function called findStudentByFirstName, which accepts one parameter, a string. This function should iterate through the students array you just made and if the parameter passed to the function is the same as one of the first name's of the students, the function should return true. Otherwise it should return false. This function should be case insensitive so that you can search successfully regardless of capitalization
 
-function findStudentByFirstName (str) {
-    let newStr = str.toLowerCase();
-    console.log(newStr);
-for ( let i=0; i< students.length; i++) {
-    if (students[i]. toLowerCase === newStr) {
-        return true;
+function findStudentByFirstName(name){
+    var lowerCasedName = name.toLowerCase();
+    for(var i = 0; i < students.length; i++){
+        if(students[i].firstName.toLowerCase() === lowerCasedName){
+            return true;
+        }
     }
-}
+    return false;
 }
 console.log (findStudentByFirstName("eliE"));
+
+// Write a function called extractEveryThird which accepts an array as a parameter. The function should iterate over the array and return a new array with every 3rd element in the array passed to the function.
+
+function extractEveryThird (array) {
+    let newArr = [];
+    for ( let i=2; i< array.length; i+=3) {
+        newArr.push(array[i]);
+    }
+    console.log (newArr);
+}
+
+console.log(extractEveryThird([1,2,3,4,5,6]));
+extractEveryThird(["first value", "second value", "third value"]);
+
+// Write a function called countEvensAndOdds which accepts an array as a parameter. This function should return an object with the count of even numbers and the count of odd numbers. The object returned should have the keys oddCount and evenCount.
+
+function countEvensAndOdds (arr) {
+    let obj = {
+        oddCount : 0,
+        evenCount: 0
+    };
+
+    for ( let i=0; i<arr.length; i++) {
+        if (arr[i] %2 === 0) {
+           // console.log (arr[i]);
+           obj.evenCount++;
+        } else {
+            obj.oddCount++;
+        }
+    }
+    return obj;
+}
+
+console.log (countEvensAndOdds([1,2,3,4,5,6,7]));
+
+// Write a function called onlyCapitalLetters which accepts a string and returns a new string with only the capital letters passed to the string.
+function onlyCapitalLetters (str) {
+   let newStr = "";
+   for (let i=0; i<str.length; i++) {
+       if ("ABCDEFGHIJKLMNOPQRSTUVWXYZ".includes(str[i])) {
+           newStr ++;
+       }
+   }
+   return newStr;
+}
+
+console.log(onlyCapitalLetters("AMazing"));
+
+
+
+
