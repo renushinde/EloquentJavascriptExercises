@@ -1,0 +1,6 @@
+In this chapter we studies different data types in Js. They are strings, numbers, undefined and Boolean. Strings are anything between "", ''. We can use template literals using `` characters. In a template literal, we start with ` ${ }`. The expression within ${} is evaluated..
+
+
+A boolean can take two values, true and false. There are logical operators to evaluate booleans. They are &&, || and !.
+There is only one value in JS that is not equal to itself. It is (NaN === Nan). 
+
